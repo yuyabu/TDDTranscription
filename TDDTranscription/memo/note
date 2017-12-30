@@ -6,5 +6,7 @@ $5 + 10CHR = $10(rate 2:1)
 amountをprivateに
 ~~Dollarの副作用~~
 Moneyの丸処理
-equals()
+~~equals()~~
 hashcode()
+nullとの等価性比較
+他のオブジェクトとの等価生比較
