@@ -13,7 +13,7 @@ nullとの等価性比較
 ~~5CHF * 2 = 10 CHF~~
 DollarとFrancの重複
 ~~equalsの一般化~~
-timesの一般化
+~~timesの一般化~~
 ~~FrancとDollarを比較する~~
 ~~通過の概念~~
 testFrancMultiplicationを消す？
