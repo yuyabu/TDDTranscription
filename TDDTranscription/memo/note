@@ -2,7 +2,7 @@
 
 # TODO
 $5 + 10CHR = $10(rate 2:1)
-amountをprivateに
+$5 + $5 = $10
 Moneyの丸処理
 hashcode()
 nullとの等価性比較
