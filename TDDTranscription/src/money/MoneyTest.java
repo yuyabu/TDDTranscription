@@ -71,4 +71,11 @@ class MoneyTest {
 		assertEquals(Money.dollar(1),result);
 	}
 	
+	@Test
+	public void testdentityRate() {
+		assertEquals(1,new Bank().rate("USD", "USD"));
+	}
+	
+	
+
 }
