@@ -30,7 +30,8 @@ public class Money implements Expression{
 	public String toString() {
 		return amount + "" + currency;
 	}
-	Expression plus(Money added) {
+	@Override
+	public Expression plus(Expression added) {
 		return new Sum(this,added);
 	}
 
@@ -38,5 +39,6 @@ public class Money implements Expression{
 		int rate = bank.rate(currency, to);
 		return new Money(amount / rate, to);
 	}
+
 	
 }
