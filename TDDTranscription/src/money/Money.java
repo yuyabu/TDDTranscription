@@ -31,6 +31,6 @@ public class Money implements Expression{
 		return amount + "" + currency;
 	}
 	Expression plus(Money added) {
-		return new Money(this.amount + added.amount,currency);
+		return new Sum(this,added);
 	}
 }
