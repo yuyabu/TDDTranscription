@@ -8,7 +8,7 @@ $5 + $5 がMoneyを返す
 ~~Moneyを変換して換算を行う~~
 ~~Reduce(Bank,String)~~
 ~~Sum.plus~~
-Expression.times
+~~Expression.times~~
 
 Moneyの丸処理
 hashcode()
