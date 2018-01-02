@@ -86,6 +86,41 @@ class MoneyTest {
 		
 	}
 	
+	@Test
+	public void testSumPlusMoney() {
+		Expression fiveBucks = Money.dollar(5);
+		Expression tenFrancs =  Money.franc(10);
+		Bank bank = new Bank();
+		bank.addRate("CHF", "USD", 2);
+		Expression sum = new Sum(fiveBucks,tenFrancs).plus(fiveBucks);
+		Money result = bank.reduce(sum, "USD");
+		assertEquals(Money.dollar(15),result);
+		
+	}
+	
+	/**
+	 * 本とは関係ないけどこのテストはなぜか失敗する
+	 */
+	@Test
+	public void testSumPlusMoney2() {
+		Expression fiveBucks = Money.dollar(5);
+		Expression tenFrancs =  Money.franc(10);
+		Bank bank = new Bank();
+		bank.addRate("CHF", "USD", 2);
+		Expression sum = new Sum(fiveBucks,tenFrancs);
+		//メソッドが連鎖して長くなったので、
+		//以下のようにみやすく書いたつもりが、
+		//実行結果を捨ててしまっていたためテストがこけていた。
+		//sum.plus(fiveBucks);
+		
+		//小分けに書くなら以下が正しい
+		sum = sum.plus(fiveBucks);
+				
+		Money result = bank.reduce(sum, "USD");
+		assertEquals(Money.dollar(15),result);
+		
+	}
+	
 	
 
 }
