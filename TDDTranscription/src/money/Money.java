@@ -21,9 +21,10 @@ public class Money implements Expression{
 	static Money franc(int amount) {
 		return new Money(amount,"CHF");
 	}
-	 public Money times(int multiplier) {
+	 public Expression times(int multiplier) {
 		 return new Money(amount * multiplier,currency);
-	 };
+	 }
+	 
 	String currency() {
 		return currency;
 	}
@@ -39,6 +40,7 @@ public class Money implements Expression{
 		int rate = bank.rate(currency, to);
 		return new Money(amount / rate, to);
 	}
+	
 
 	
 }
